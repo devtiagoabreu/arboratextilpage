@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbora Têxtil | Da Raiz ao Fio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arbora: {
+                            dark: '#1F3D2B',
+                            mid: '#6B8F71',
+                            light: '#E8DCCF',
+                            accent: '#6A4E42',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .menu-open {
+            overflow: hidden;
+        }
+
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-[#FCFAF8] text-arbora-dark font-sans overflow-x-hidden">
+
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-arbora-light">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div
+                    class="w-8 h-8 bg-arbora-dark rounded-full flex items-center justify-center text-arbora-light text-[10px]">
+                    🌿</div>
+                <span class="font-serif text-xl tracking-widest font-bold uppercase">Arbora</span>
+            </div>
+
+            <div class="hidden md:flex gap-8 font-medium text-sm tracking-wide uppercase">
+                <a href="#produtos" class="hover:text-arbora-mid transition">Produtos</a>
+                <a href="#conceito" class="hover:text-arbora-mid transition">Conceito</a>
+                <a href="#contato" class="hover:text-arbora-mid transition">Contato</a>
+            </div>
+
+            <button id="menu-btn" class="p-2 text-arbora-dark focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 z- bg-arbora-dark translate-x-full flex flex-col justify-center items-center text-center">
+        <button id="close-btn" class="absolute top-6 right-6 text-arbora-light">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <div class="flex flex-col gap-8 text-2xl font-serif text-arbora-light">
+            <a href="#produtos" onclick="toggleMenu()">Tecidos</a>
+            <a href="#produtos" onclick="toggleMenu()">Cama</a>
+            <a href="#produtos" onclick="toggleMenu()">Mesa</a>
+            <a href="#produtos" onclick="toggleMenu()">Bolsas</a>
+            <hr class="w-12 border-arbora-mid mx-auto">
+            <a href="#contato" onclick="toggleMenu()"
+                class="text-lg uppercase tracking-widest font-sans font-light">Fale Conosco</a>
+        </div>
+    </div>
+
+    <section class="relative h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="container mx-auto px-6 text-center z-10">
+            <span class="inline-block text-arbora-mid tracking-[0.3em] uppercase text-xs mb-4 font-semibold">Da Raiz ao
+                Fio</span>
+            <h1 class="font-serif text-5xl md:text-7xl mb-6 leading-tight">Conforto com <br><span
+                    class="italic text-arbora-accent">essência natural.</span></h1>
+            <p class="max-w-md mx-auto text-gray-600 mb-10 font-light leading-relaxed">Transformando o cotidiano através
+                da integridade têxtil e design atemporal.</p>
+            <a href="https://wa.me/seunumeroaqui"
+                class="bg-arbora-dark text-arbora-light px-10 py-4 rounded-full text-sm uppercase tracking-widest hover:bg-arbora-accent transition shadow-xl">Conhecer
+                o Prism</a>
+        </div>
+        <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-arbora-light/30 rounded-full blur-3xl"></div>
+    </section>
+
+    <section id="produtos" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h2 class="font-serif text-3xl mb-2 italic">Nossas Frentes</h2>
+            <div class="w-12 h-[1px] bg-arbora-accent mx-auto"></div>
+        </div>
+
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="group relative overflow-hidden bg-arbora-light h-[400px] flex items-end p-6">
+                <div class="absolute inset-0 bg-black/5 group-hover:bg-black/20 transition duration-500"></div>
+                <div class="relative z-10 text-white">
+                    <h3 class="font-serif text-2xl text-arbora-dark">Tecidos</h3>
+                    <p class="text-xs text-arbora-dark/70 uppercase tracking-tighter">Por metro / Qualidade Industrial
+                    </p>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden bg-arbora-mid h-[400px] flex items-end p-6">
+                <div class="absolute inset-0 bg-black/5 group-hover:bg-black/20 transition duration-500"></div>
+                <div class="relative z-10 text-white">
+                    <h3 class="font-serif text-2xl text-white">Cama</h3>
+                    <p class="text-xs text-white/70 uppercase tracking-tighter italic font-light">Destaque: Lençol Prism
+                    </p>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden bg-arbora-accent h-[400px] flex items-end p-6">
+                <div class="absolute inset-0 bg-black/5 group-hover:bg-black/20 transition duration-500"></div>
+                <div class="relative z-10 text-white">
+                    <h3 class="font-serif text-2xl text-white">Mesa</h3>
+                    <p class="text-xs text-white/70 uppercase tracking-tighter">Jogos Americanos e Toalhas</p>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden bg-arbora-dark h-[400px] flex items-end p-6">
+                <div class="absolute inset-0 bg-black/5 group-hover:bg-black/20 transition duration-500"></div>
+                <div class="relative z-10 text-white">
+                    <h3 class="font-serif text-2xl text-arbora-light font-light">Bolsas</h3>
+                    <p class="text-xs text-arbora-light/70 uppercase tracking-tighter">Linha Lifestyle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conceito" class="py-24 bg-arbora-light/20">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 items-center gap-16">
+            <div class="space-y-6">
+                <span class="text-arbora-mid text-sm tracking-widest uppercase font-bold">Integridade</span>
+                <h2 class="font-serif text-4xl">Fabricação Própria, <br>Transparência Total.</h2>
+                <p class="text-gray-600 leading-relaxed font-light">
+                    Na Arbora Têxtil, dominamos o processo. Da escolha da fibra à costura final, cada detalhe é pensado
+                    para garantir que você receba um produto íntegro. Nosso lençol Prism (63% Algodão / 37% Poliéster) é
+                    a prova de que equilíbrio gera durabilidade.
+                </p>
+                <div class="flex items-center gap-4 py-4">
+                    <div class="text-center">
+                        <div class="font-serif text-2xl">63%</div>
+                        <div class="text-[10px] uppercase tracking-widest text-arbora-mid font-bold">Algodão</div>
+                    </div>
+                    <div class="w-[1px] h-10 bg-arbora-mid/30"></div>
+                    <div class="text-center">
+                        <div class="font-serif text-2xl">37%</div>
+                        <div class="text-[10px] uppercase tracking-widest text-arbora-mid font-bold">Poliéster</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-arbora-dark h-80 rounded-2xl flex items-center justify-center p-10 text-center">
+                <i data-lucide="leaf" class="text-arbora-light w-20 h-20 opacity-20 absolute"></i>
+                <p class="text-arbora-light font-serif text-xl italic relative z-10 leading-relaxed">
+                    "A Arbora nasce da união entre natureza, conforto e design, transformando produtos do dia a dia em
+                    experiências sensoriais."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-arbora-dark text-arbora-light py-20 px-6">
+        <div class="container mx-auto text-center space-y-12">
+            <div class="space-y-4">
+                <h2 class="font-serif text-3xl">Pronto para transformar seu descanso?</h2>
+                <p class="text-arbora-light/60 font-light uppercase tracking-widest text-sm">Fale com nossa equipe no
+                    WhatsApp</p>
+            </div>
+            <div class="flex justify-center gap-8">
+                <a href="#" class="hover:text-white transition"><i data-lucide="instagram"></i></a>
+                <a href="#" class="hover:text-white transition"><i data-lucide="facebook"></i></a>
+                <a href="https://wa.me/seunumeroaqui" class="hover:text-white transition"><i
+                        data-lucide="message-circle"></i></a>
+            </div>
+            <hr class="border-arbora-light/10">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center text-xs text-arbora-light/40 uppercase tracking-widest gap-4">
+                <span>&copy; 2026 Arbora Têxtil. Todos os direitos reservados.</span>
+                <span>Ponto de Outlet | Venda Direta</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar ícones
+        lucide.createIcons();
+
+        // Menu Mobile Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+
+        function toggleMenu() {
+            const isOpen = !mobileMenu.classList.contains('translate-x-full');
+            if (isOpen) {
+                mobileMenu.classList.add('translate-x-full');
+                body.classList.remove('menu-open');
+            } else {
+                mobileMenu.classList.remove('translate-x-full');
+                body.classList.add('menu-open');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>
